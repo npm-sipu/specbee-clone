@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+.crafting {
+    padding: 3.5rem 1.25rem;
+
+    .crafting-container {
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .crafting-container__items{
+            display: flex;
+            gap: 4rem;
+            justify-content: center;
+            flex-direction: column-reverse;
+            margin-inline: auto;
+
+            .crafting-texts{
+                margin: 2rem 0;
+            }
+        }
+
+        @media (min-width: 768px) {
+
+            .crafting-container__items{
+                
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+
+                div{
+                    width: 40%;
+                }
+            } 
+            :nth-child(2) {
+                flex-direction: row-reverse;
+            }
+
+            
+        }
+        
+    }
+}

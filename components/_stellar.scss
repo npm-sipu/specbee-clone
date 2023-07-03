@@ -1,0 +1,46 @@
+.stellar-container {
+    width: 100%;
+    padding: 4rem 2rem;
+
+    .stellar-content {
+        max-width: 80%;
+        margin-inline: auto;
+
+        p {
+            font-size: 1.3rem;
+            font-weight: 100;
+        }
+
+        .texts-container {
+            margin: 4rem 0;
+            h3 {
+                font-size: 1.8rem;
+                font-weight: bold;
+                padding: 4px 0;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+    @media (max-width: 768px) {
+            p {
+                font-size: 1.1rem;
+            }
+            .texts-container {
+                margin: 4rem 0;
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    padding: 4px 0;
+                }
+    
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+            
+        }
+    }
+}

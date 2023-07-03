@@ -1,0 +1,103 @@
+@use '../abstracts' as *;
+
+.primary-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: $primary-color;
+
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+
+        .primary-nav_control {
+            display: flex;
+            gap: 2rem;
+
+            .nav-contact__button {
+                text-decoration: none;
+                color: $primary-color;
+                background-color: $color-btn-primary;
+                border: 0;
+                border-radius: 4px;
+                padding: 0.6rem 0.8rem;
+                font-weight: 700;
+            
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: $color-btn-primary;
+                    border: 1px solid $color-btn-primary;
+                }
+            }
+        }
+
+        .mobile-nav-toggle {
+            display: block;
+            
+            top: 2rem;
+            right: 1rem;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            padding: 0.5em;
+
+            .icon-hamburger {
+                color: $color-bg-neutral;
+            }
+
+            .icon-close {
+                color: $color-bg-neutral;
+                display: none;
+              }
+        }
+
+        .mobile-nav-toggle[data-visible] {
+            .icon-hamburger {
+                display: none;
+            }
+
+            .icon-close {
+                display: block;
+                position: absolute;
+                top: 2.15rem;
+                right: 2.6rem;
+                z-index: 10;
+              }
+        }
+    }
+
+    .primary-navigation {
+        display: none;
+      
+        &[data-visible] {
+          color: $color-bg-neutral;
+          background-color: blue;
+          z-index: 5;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          display: block;
+      
+          .nav-list a {
+            text-decoration: none;
+            color: $color-bg-neutral;
+          }
+        }
+      }      
+}
+
+.sticking {
+    background-color: rgba(255, 255, 255, 0.2);
+    .nav-wrapper {
+        padding: 1rem 2rem;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}

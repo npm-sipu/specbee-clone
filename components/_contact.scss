@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+.contact {
+    width: 100%;
+    background-color: $primary-color;
+
+    .contact-wrapper {
+        padding: 6rem 6rem;
+        max-width: 100%;
+        margin-inline: auto;
+
+        .contact__title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            color: $color-bg-neutral;
+        }
+
+        @media (max-width: 768px) {
+            .contact__title {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact__title {
+                font-size: 2rem;
+            }
+        }
+
+        .contact__descrition {
+            margin-top: 6rem;
+            text-align: center;
+            
+        }
+
+        .contact__link {
+            text-decoration: none;
+            color: $primary-color;
+            background-color: $color-btn-primary;
+            border-radius: 4px;
+            padding: 1rem 2rem;
+            font-weight: 700;
+            
+
+            &:hover {
+                background-color: $primary-color;
+                color: $color-btn-primary;
+                border: 1px solid $color-btn-primary;
+            }
+        }
+    }
+}

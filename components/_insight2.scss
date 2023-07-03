@@ -1,0 +1,81 @@
+@use "../abstracts" as *;
+
+.insight2-container {
+    width: 100%;
+    padding: 5rem;
+    background-color: $primary-color;
+
+    .insight2-container_texts {
+        width: 70%;
+
+        .insight2-container_title{
+            color: $color-bg-neutral;
+            font-size: 4rem;
+            font-weight: 900;
+        }
+
+        .insight2-container_description {
+            margin: 2rem 0;
+            color: $color-bg-neutral;
+            font-size: 1.2rem;
+            line-height: 1.65;
+        }
+    }
+
+    .cards-container{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        
+
+        .insight2-card {
+            width: 30%;
+            background-color: $color-bg-neutral;
+            overflow: hidden;
+
+            .insight2-card__image {
+                transition: transform 0.3s;
+            }
+
+            &:hover {
+                .insight2-card__image {
+                    transform: scale(1.2);
+                    overflow: hidden;
+                }
+            }
+        }
+
+        @media (max-width: 1024px) {
+
+            flex-wrap: wrap;
+            
+            .insight2-card {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+
+            .insight2-card {
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+    }
+
+    
+
+    .insight2-card-texts {
+        .insight2-card__title {
+            padding: 1.5rem 1.5rem 0 1.5rem;
+            color: $primary-color;
+        }
+
+        .insight2-card__footer {
+            padding: 1.5rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    }
+}

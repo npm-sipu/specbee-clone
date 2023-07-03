@@ -1,0 +1,108 @@
+@use '../abstracts' as *;
+
+.footer {
+    padding-top: 5.5rem;
+    padding-bottom: 4.5rem;
+    background-color: $grey;
+
+    &__menu {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @media screen and (min-width:1024px) {
+            display: flex;
+        }
+    }
+
+    &_left_container {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 55px;
+        border-bottom: initial;
+        border-right: 0.0625rem solid #cdced9;
+    }
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-top: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $navy-blue;
+        padding-top: 2px;
+    }
+
+    &_left_menu {
+        width: 47%;
+
+        @media screen and (min-width:1024px) {
+            width: 60%;
+        }
+    }
+
+    &_location_heading {
+        color: $navy-blue;
+    }
+
+    &__locations {
+        column-count: 2;
+
+        @media screen and (min-width:1024px) {
+            display: flex;
+            gap: 4rem;
+        }
+    }
+
+    &__location {
+        width: 100%;
+        break-inside: avoid;
+        margin-bottom: 2.5rem;
+    }
+
+    &_social_container {
+        margin-top: 50px;
+        color: $navy-blue;
+        display: flex;
+        gap: 4rem;
+
+        @media (max-width: 480px) {
+            gap: 2rem;
+        }
+    }
+
+    &_right_container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    &__icons ul {
+        display: flex;
+        gap: 0.75rem;
+        list-style-image: none;
+        list-style-type: none;
+        align-items: center;
+    }
+
+    &__images {
+        width: 72px;
+        display: flex;
+        height: 72px;
+        gap: 10px;
+        padding: 10px;
+        margin-left: -14px;
+        cursor: pointer;
+
+        img{
+            &:hover {
+                transform: scale(1.2);
+                transition: .25s;
+            }
+        }
+    }
+}

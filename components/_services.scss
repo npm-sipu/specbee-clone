@@ -1,0 +1,95 @@
+.services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-inline: auto;
+    .services-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        width: 25%;
+        margin: 2rem auto;
+
+        @media (max-width: 768px) {
+            width: 45%;
+        }
+
+        .image-container {
+            position: relative;
+            width: 175px; /* Adjust the width as needed */
+            height: 175px; /* Adjust the height as needed */
+            margin: 0 auto;
+
+            
+
+            &::before {
+                background: url("../images/polygon-line.svg") no-repeat 50%/contain;
+                content: "";
+                height: 15.5rem;
+                height: 15.5rem;
+                left: -3.2rem;
+                position: absolute;
+                top: -1rem;
+                width: 17.5rem;
+                transform: scale(0.8) 2.5s ease-in ;
+                z-index: -1;
+                transition: transform 2.5s; 
+              }
+            
+              &:hover::before {
+                transform: scale(1) 2.5s ease-out;
+                z-index: 1;
+              }
+
+            .image-bg {
+                width: 100%;
+                margin: 10px auto;
+            }
+
+            .image-top {
+                width: 6rem;
+                position: absolute;
+                top: 3.8rem;
+                left: 2.5rem;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+            width: 80%;
+            .services__title {
+                h1 {
+                    width: 100%;
+
+                    ::before {
+                        content: '';
+                        width: 3rem;
+                        height: 0.8rem;
+                        background-color: yellowgreen;
+                        display: inline-block;
+                        vertical-align: text-top;
+                        /* margin-right: 4rem; */
+                    }
+                }
+            }
+        }
+    }
+
+    .services-texts {
+        margin-top: 5rem;
+        color: aliceblue;
+
+        h2{
+            text-align: center;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}
